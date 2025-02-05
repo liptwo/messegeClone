@@ -1,0 +1,149 @@
+.chat{
+    border-left:solid 1px rgba(154, 145, 145, 0.428);
+    border-right:solid 1px rgba(154, 145, 145, 0.428);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    .top{
+        border-bottom:solid 1px rgba(154, 145, 145, 0.428);
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding:20px;
+        .user{
+            
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            img{
+                width: 50px;
+                height: 50px;
+                border-radius: 50%;
+                object-fit: cover;
+            }
+            .text{
+                display: flex;
+                flex-direction: column;
+                gap: 5px;
+                span{
+                    font-size: 18px;
+                    font-weight: bold;
+                }
+
+                p{
+                    font-size: 14px;
+                    font-weight: 300;
+                    color:aquamarine;
+                }
+            }
+        }
+        .icons{
+            display: flex;
+            gap:20px;
+            img{
+                width: 20px;
+                height: 20px;
+            }
+        }
+    }
+    .center{
+        padding: 20px;
+        overflow:auto;
+        display: flex;
+        flex:1;
+        flex-direction: column;
+        gap: 20px;
+        .message{
+            max-width: 70%;
+            display: flex;
+            gap: 20px;
+            &.own{
+                align-self: flex-end;
+                
+                .texts{
+                    p{
+                        background-color: #44bac2;
+                    }
+                    span{
+                        display: flex;
+                        justify-content:flex-end;
+                    }
+                }
+            }
+            img{
+                width: 30px;
+                height: 30px;
+                object-fit: cover;
+                border-radius: 50%;
+            }
+            .texts{
+                display: flex;
+                flex:1;
+                flex-direction: column;
+                gap: 5px;
+                img{
+                    display: flex;
+                    justify-content:flex-end;
+                    width: auto;
+                    height: auto;
+                    border-radius:3px ;
+
+                }
+                p{
+                    background-color: #133e64;
+                    border-radius: 10px;
+                    padding: 10px;
+                }
+                span{
+                    font-size: 13px;
+                }
+            }
+
+        }
+    }
+    .bottom{
+        padding: 20px;
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        justify-content: space-between;
+        border-top:solid 1px rgba(154, 145, 145, 0.428);
+        margin-top:auto;
+        .icons{
+            display: inline-flex;
+            gap: 20px;
+
+        }
+        img{
+            width: 20px;
+            height: 20px;
+            cursor: pointer;
+        }
+        input{
+            flex:1;
+            border-radius: 10px;
+            background-color: rgba(28, 56, 142, 0.749);
+            border: none;
+            outline: none;
+            color: white;   
+            padding: 20px;
+            font-size: 16px;
+        }
+        .emoji{ 
+            position: relative;
+            .picker{
+                position: absolute;
+                bottom: 50px;
+                left:0px;
+            }
+        }
+        .sendButton{
+            background-color: #1147eabf;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    }
+}
